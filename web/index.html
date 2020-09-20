@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>🐹 PZ Chat</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://imgcache.qq.com/qcloud/cloudbase-js-sdk/1.0.4/cloudbase.full.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css
+">
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body style="width: 100%; height: 100%">
+<div class="modal fade" id="signin_modal">
+    <div class="modal-dialog" style="background-color: white;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">登录/注册</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="email">登录邮箱：</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group" id="div_password">
+                    <label for="password">登录密码：</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <div class="form-group" id="div_confirm_password" hidden="hidden">
+                    <label for="confirm_password">确认密码：</label>
+                    <input type="password" class="form-control" id="confirm_password">
+                </div>
+                <button class="btn btn-primary" onclick="onSignIn()" id="btn_sign">登录</button>
+                <button class="btn btn-primary" onclick="resetPassword()" id="btn_reset" hidden="hidden">发送确认邮件</button>
+                <a id="change_sign" href="#" onclick="changeSign()" style="float: right">注册账号</a>
+                <a id="forget_password" href="#" onclick="forgetPassword()" style="float: right; margin-right: 10px;">忘记密码</a>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="chat_box" class="chat_box"></div>
+<div id="input" class="input"></div>
+<script src="chat.js"></script>
+</body>
+</html>

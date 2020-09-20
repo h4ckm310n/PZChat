@@ -1,0 +1,29 @@
+<!--miniprogram/pages/chat/chat.wxml-->
+<view class="page">
+  <scroll-view scroll-y="true" class="chat_box" id="chat_box">
+    <view class="chat_item" wx:for="{{msgs}}">
+      <image src="{{item.avatar}}" class="chat_avatar"></image>
+      <view class="chat_nickname">{{item.nickname}}</view>
+      <view class="chat_content">
+        <text wx:if="{{item.type == 1}}" class="chat_text">{{item.content}}</text>
+        <image wx:if="{{item.type == 2}}" src="{{item.content}}" mode="widthFix" style="width: 95%"></image>
+        <video wx:if="{{item.type == 3}}" src="{{item.content}}"></video>
+        <image wx:if="{{item.type == 4}}" src="{{icon_audio_play}}" mode="widthFix" class="chat_audio" bindtap="playAudio" data-url="{{item.content}}"></image>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="input" style="display: block">
+    <view wx:if="{{login}}" style="display: inline">
+      <textarea class="textarea" name="textarea" value="{{input_text}}" bindinput="onInput"></textarea>
+    </view>
+    <view wx:if="{{login}}" style="display: block; margin-top: 10px">
+      <image class="icon" src="{{icon_image}}" mode="widthFix" bindtap="chooseImage"></image>
+      <image class="icon" src="{{icon_video}}" mode="widthFix" bindtap="chooseVideo"></image>
+      <image class="icon" src="{{icon_audio}}" mode="widthFix" bindlongpress="onRecord" bindtouchend="endRecord"></image>
+      <image class="icon" src="{{icon_send}}" mode="widthFix" bindtap="sendText" style="float: right"></image>
+    </view>
+    <view wx:if="{{!login}}">
+      <button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" size="mini" style="width: 400rpx; height: 90%">点击登录</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+.chat_box {
+    height: 83%;
+    background-color: #87CEFA;
+    overflow: auto;
+}
+
+.chat_avatar {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 20%;
+}
+
+.chat_nickname {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.chat_item {
+    display: block;
+    margin: 30px;
+}
+
+.chat_content {
+    margin-left: 40px;
+    padding: 5px;
+}
+
+.chat_text {
+    background-color: white;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10%
+}
+
+.input {
+    display: block;
+    padding: 10px;
+    background-color:#4682B4;
+    height: 17%;
+}
+
+.login_btn {
+    background-color: #87CEEB;
+    color: white;
+    height: 40%;
+    margin-left: 50%;
+}
+
+.icon {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 4%;
+}
+
+.textarea {
+    display: block;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 15px;
+}

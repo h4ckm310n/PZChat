@@ -1,0 +1,91 @@
+/* miniprogram/pages/chat/chat.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.login_btn {
+  background-color: #87CEEB;
+  color: white;
+  margin-left: 20%;
+}
+
+.chat_box {
+  height: 83%;
+  background-color: #87CEFA;
+}
+
+.input {
+  display: flex;
+  padding: 10px;
+  background-color:#4682B4;
+  height: 14%;
+}
+
+.textarea {
+  display: inline-block;
+  background-color: white;
+  width: 94%;
+  height: 40%;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.send {
+  display: inline-block;
+  background-color: #87CEEB;
+  color: white;
+}
+
+.icon {
+  display: inline-flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 15%;
+}
+
+.chat_avatar {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 20%;
+}
+
+.chat_nickname {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.chat_item {
+  display: block;
+  margin: 30px;
+}
+
+.chat_content {
+  margin-left: 40px;
+  padding: 5px;
+}
+
+.chat_text {
+  background-color: white; 
+  padding: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10%
+}
+
+.chat_audio {
+  background-color: white;
+  padding: 3px;
+  padding-left: 5px;
+  border-radius: 10%;
+  width: 14%; 
+  padding-right: 40px;
+}
